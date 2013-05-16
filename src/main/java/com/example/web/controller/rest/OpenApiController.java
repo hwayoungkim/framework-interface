@@ -1,5 +1,8 @@
 package com.example.web.controller.rest;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,9 +38,11 @@ public class OpenApiController {
 	 * @param mav ModelAndView
 	 * @return Forward View
 	 */
-	@RequestMapping(value = "/getOpenApiDetail")
-	public ModelAndView getOpenApiDetail(ModelAndView mav) {
+	@RequestMapping(value = "/getOpenApiDetail", method = RequestMethod.GET)
+	public ModelAndView getOpenApiDetail(ModelAndView mav,HttpServletRequest request) {
 		mav.setViewName("getOpenApiDetail");
+		String apiId = request.getParameter("apiId");
+		mav.addObject("apiId", apiId);
 		return mav;
 	}
 	
@@ -48,9 +53,9 @@ public class OpenApiController {
 	 * @param mav ModelAndView
 	 * @return Forward View
 	 */
-	@RequestMapping(value = "/createOpenApi", method = RequestMethod.GET)
+	@RequestMapping(value = "/registerOpenApi", method = RequestMethod.GET)
 	public ModelAndView createOpenApi(ModelAndView mav) {
-		mav.setViewName("createOpenApi");
+		mav.setViewName("registerOpenApi");
 		return mav;
 	}
 
@@ -61,8 +66,10 @@ public class OpenApiController {
 	 * @return Forward View
 	 */
 	@RequestMapping(value = "/modifyOpenApi", method = RequestMethod.GET)
-	public ModelAndView modifyOpenApiView(ModelAndView mav) {
+	public ModelAndView modifyOpenApiView(ModelAndView mav, HttpServletRequest request) {
 		mav.setViewName("modifyOpenApi");
+		String apiId = request.getParameter("apiId");
+		mav.addObject("apiId", apiId);
 		return mav;
 	}
 

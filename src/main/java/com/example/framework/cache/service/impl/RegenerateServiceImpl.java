@@ -72,8 +72,7 @@ public class RegenerateServiceImpl implements RegenerateService {
 		List<String> requestContentTypeList = new ArrayList<String>();
 
 		for (int i = 0; i < reqContentSize; i++) {
-			JSONObject reqContent = requestArray.getJSONObject(i);
-			String contentType = reqContent.getString(CONTENT_TYPE);
+			String contentType = requestArray.getString(i);
 			requestContentTypeList.add(contentType);
 		}
 
@@ -82,9 +81,7 @@ public class RegenerateServiceImpl implements RegenerateService {
 		List<String> responseContentTypeList = new ArrayList<String>();
 
 		for (int i = 0; i < resContentSize; i++) {
-			JSONObject resContent = responseArray.getJSONObject(i);
-			String contentType = resContent.getString(CONTENT_TYPE);
-
+			String contentType = responseArray.getString(i);
 			responseContentTypeList.add(contentType);
 		}
 

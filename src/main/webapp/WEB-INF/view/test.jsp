@@ -18,7 +18,7 @@
 
 <script type="text/javascript">
 
-var TARGET_URL_PREFIX = "http://localhost:8080/framework/config";
+var TARGET_URL_PREFIX = "http://localhost:8081/framework/config";
 
 $(document).ready(function() {
 /*
