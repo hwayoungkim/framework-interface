@@ -282,9 +282,9 @@ td,th{
 <div class="span2">
 <br><br><br>
 <ul class="nav nav-tabs nav-stacked">
-<a href="http://localhost:8081/openApi/getOpenApiList">OpenAPI 목록</a></ul>
+<a href="http://localhost:8081/openApi/getOpenApiList"><i class="icon-chevron-right"></i> OpenAPI 목록</a></ul>
 <ul class="nav nav-tabs nav-stacked">
-<a href="http://localhost:8081/openApi/registerOpenApi">OpenAPI 등록</a></ul>
+<a href="http://localhost:8081/openApi/registerOpenApi"><i class="icon-chevron-right"></i> OpenAPI 등록</a></ul>
 </div>
 <div class="span10">
 <br><p><i class="icon-edit"></i> OpenAPI 수정</p><hr>
@@ -395,7 +395,7 @@ td,th{
 </tr>
 </table>
 
-<br><i class="icon-star"></i> Request 정보 (<abbr title="attribute"><i class="icon-ok"></i>는 필수입력 사항입니다.</abbr>)
+<br><i class="icon-star"></i> Request 정보)
 <hr>
 <table>
 <tr>
@@ -413,7 +413,9 @@ td,th{
 	<label class="control-label" for="inputError"></label>
 	<div class="controls">
         <textarea class="input-xxlarge" rows="3" id="queryString"></textarea>
-        <button class="btn btn-primary btn-info" type="button" id="createField">필드생성</button>
+        <ul class="pager">
+		<li><a id="createField">필드생성</a></li>
+		</ul>
         <span class="help-inline"></span>
         </div></div>
      </td>
@@ -445,7 +447,7 @@ td,th{
     	<td></td>
     </tr>
 </table>
-<br><i class="icon-star"></i> Response 정보 (<abbr title="attribute"><i class="icon-ok"></i>*는 필수입력 사항입니다.</abbr>)<hr>
+<br><i class="icon-star"></i> Response 정보<hr>
 <table>
 <tr>
     <th>Content-type</th>
@@ -461,9 +463,12 @@ td,th{
 </tr>
 </table>
 <center><br>
-<button class="btn btn-primary btn-info" type="button" id="back">뒤로</button>
-<button class="btn btn-primary btn-info" type="button" id="modify">수정</button>
+<ul class="pager">
+<li><a id="back">뒤로</a></li>
+<li><a id="modify">수정</a></li>
+</ul>
 </center>
+<br>
 </div></div></div>
 </body>
 </html>

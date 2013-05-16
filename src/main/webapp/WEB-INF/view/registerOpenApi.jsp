@@ -141,11 +141,7 @@ var TARGET_URL_PREFIX = "http://localhost:8081/framework/config";
 				alert("queryString를 입력해 주세요!");
 			}
 		});
-		
-		$("#previous").click(function(){
-			location.href='http://localhost:8081/openApi/getOpenApiList';
-		});
-		
+
 		$("#save").click(function(){
 
 			var service = $('#service').val();
@@ -201,7 +197,6 @@ var TARGET_URL_PREFIX = "http://localhost:8081/framework/config";
 			}
 		});
 	});
-	
 </script>
 
 <title>registerOpenApi</title>
@@ -408,8 +403,8 @@ td,th{
 </table>
 <center><br>
 <ul class="pager">
-<li><a href="http://localhost:8081/openApi/getOpenApiList">뒤로</a></li>
-<li><a href="http://localhost:8081/openApi/registerOpenApi">등록</a></li>
+<li><a href="http://localhost:8081/openApi/getOpenApiList" id="previous">뒤로</a></li>
+<li><a id="save">등록</a></li>
 </ul>
 </center>
   </div></div></div>

@@ -113,9 +113,9 @@ td,th{
 <div class="span2">
 <br><br><br>
 <ul class="nav nav-tabs nav-stacked">
-<a href="http://localhost:8081/openApi/getOpenApiList">OpenAPI 목록</a></ul>
+<a href="http://localhost:8081/openApi/getOpenApiList"><i class="icon-chevron-right"></i> OpenAPI 목록</a></ul>
 <ul class="nav nav-tabs nav-stacked">
-<a href="http://localhost:8081/openApi/registerOpenApi">OpenAPI 등록</a></ul>
+<a href="http://localhost:8081/openApi/registerOpenApi"><i class="icon-chevron-right"></i> OpenAPI 등록</a></ul>
 </div>
 <div class="span10">
 <br><p><i class="icon-list-alt"></i> OpenAPI 상세정보</p><hr>
